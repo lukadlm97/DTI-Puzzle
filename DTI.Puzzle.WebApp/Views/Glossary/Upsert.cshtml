@@ -1,0 +1,42 @@
+﻿@model GlossaryUpsertViewModel
+
+<div class="container">
+    <h2>@ViewBag.Title</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Glossary Entry</h4>
+            <hr />
+
+            <form asp-controller="Glossary" asp-action="Save" method="post" class="form-horizontal">
+                <input type="hidden" asp-for="Id" />
+
+                <div class="form-group row">
+                    <label asp-for="Term" class="col-md-2 col-form-label">Term:</label>
+                    <div class="col-md-10">
+                        <input asp-for="Term" class="form-control" />
+                        <span asp-validation-for="Term" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label asp-for="Description" class="col-md-2 col-form-label">Description:</label>
+                    <div class="col-md-10">
+                        <input asp-for="Description" class="form-control" />
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-10 offset-md-2">
+                        <button type="submit" class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </form>
+
+            <p>
+                <a asp-controller="Glossary" asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+            </p>
+        </div>
+    </div>
+</div>

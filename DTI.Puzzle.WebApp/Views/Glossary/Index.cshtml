@@ -1,0 +1,76 @@
+﻿@model GlossaryIndexViewModel
+
+<div class="container">
+    <h2>List of All Available Terms</h2>
+
+    <form id="searchForm" asp-controller="Glossary" asp-action="Search" method="post">
+        <input type="hidden" asp-for="PageSize" />
+        <div class="form-group row">
+            <label asp-for="Query" class="col-md-2 col-form-label">Search:</label>
+            <div class="col-md-8">
+                <input id="Query" asp-for="Query" class="form-control" />
+                <span asp-validation-for="Query" class="text-danger"></span>
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-outline-primary">Search</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="resetFilter()">Reset</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.GlossaryItems[0].Term)</th>
+                <th>@Html.DisplayNameFor(model => model.GlossaryItems[0].Definition)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.GlossaryItems.Any())
+            {
+                @foreach (var item in Model.GlossaryItems)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Term)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Definition)</td>
+                        <td>
+                            <a asp-controller="Glossary" asp-action="Details" asp-route-glossaryId="@item.Id" class="btn btn-outline-primary">Details</a>
+                            <a asp-controller="Glossary" asp-action="Upsert" asp-route-glossaryId="@item.Id" class="btn btn-outline-secondary">Edit</a>
+                            <a asp-controller="Glossary" asp-action="Delete" asp-route-glossaryId="@item.Id" class="btn btn-outline-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3">No available terms</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (Model.AvailabePageNumbers.Any())
+    {
+        <form id="paginationForm" asp-controller="Glossary" method="post">
+            <div class="btn-group" role="group">
+                @foreach (var item in Model.AvailabePageNumbers)
+                {
+                    <button type="submit" asp-route-pageNumber="@item" asp-route-pageSize="@Model.PageSize" asp-route-query="@Model.Query" class="btn btn-outline-primary @(item == Model.CurrentPageNumber ? "disabled" : "")">@item</button>
+                }
+            </div>
+        </form>
+    }
+    <p>
+        <a asp-controller="Glossary" asp-action="Upsert" asp-route-glossaryId=null class="btn btn-success">Create New Term</a>
+    </p>
+</div>
+
+<script>
+    function resetFilter() {
+        // Assuming you have an ID for the input field, e.g., "Query"
+        document.getElementById("Query").value = "";
+        document.getElementById("searchForm").submit();
+    }
+
+</script>

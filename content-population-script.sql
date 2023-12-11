@@ -1,0 +1,51 @@
+Use [YourDbName]
+GO
+INSERT [dbo].[Actions] ([Name]) VALUES (N'Create')
+INSERT [dbo].[Actions] ([Name]) VALUES (N'Update')
+INSERT [dbo].[Actions] ([Name]) VALUES (N'Delete')
+GO
+
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'abyssal plain', N'The ocean floor from the continental margin, usually very flat with a slight slope.', 0)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'igneous rock', N'A type of rock that forms from the cooling and solidification of magma or lava.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'biodiversity', N'The variety of plant and animal life in a particular habitat, a high level of which is usually considered to be important and desirable.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'sustainable development', N'Development that meets the needs of the present without compromising the ability of future generations to meet their own needs.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'biome', N'A large naturally occurring community of flora and fauna occupying a major habitat.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'deforestation', N'The action of clearing a wide area of trees.', 0)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'carbon footprint', N'The amount of carbon dioxide and other carbon compounds emitted due to the consumption of fossil fuels by a particular person, group, etc.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'global warming', N'A gradual increase in the overall temperature of the earths atmosphere, generally attributed to the greenhouse effect caused by increased levels of carbon dioxide.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'acid rain', N'Rainfall made sufficiently acidic by atmospheric pollution that it causes environmental harm, typically to forests and lakes.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'solar energy', N'Radiant light and heat from the sun that is harnessed using a range of ever-evolving technologies such as solar heating, photovoltaics, solar thermal energy, solar architecture, and artificial photosynthesis.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'biodiesel', N'A biofuel intended as a substitute for diesel.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'ozone layer', N'A layer of ozone high up in the earths atmosphere that absorbs most of the suns ultraviolet (UV) radiation.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'renewable energy', N'Energy from a source that is not depleted when used, such as wind or solar power.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'biodegradable', N'Capable of being decomposed by bacteria or other living organisms.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'genetically modified organism (GMO)', N'An organism whose genetic material has been altered in a way that does not occur naturally through mating or natural recombination.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'greenhouse effect', N'The trapping of the suns warmth in a planets lower atmosphere, caused by the greater transparency of the atmosphere to visible radiation from the sun than to infrared radiation emitted from the planets surface.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'biodiversity hotspot', N'A biogeographic region that is both a significant reservoir of biodiversity and is threatened with destruction.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'carbon cycle', N'The series of processes by which carbon compounds are interconverted in the environment, chiefly involving the incorporation of carbon dioxide into living tissue by photosynthesis and its return to the atmosphere through respiration, the decay of dead organisms, and the burning of fossil fuels.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'wind energy', N'Energy derived from the movement of the air (wind) across the earths surface.', 1)
+INSERT [dbo].[GlossaryItems] ([Term], [Definition], [IsActive]) VALUES (N'sustainability', N'The ability to be maintained at a certain rate or level without the depletion of natural resources or damage to the environment.', 1)
+Go;
+
+
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (1, 1, '2023-11-27T12:30:00.000') -- Assuming this change happened on November 27, 2023, at 12:30 PM
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (2, 1, '2023-11-26T15:45:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (3, 1, '2023-11-25T09:20:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (4, 1, '2023-11-24T18:10:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (5, 1, '2023-11-23T14:05:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (6, 1, '2023-11-22T20:55:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (7, 1, '2023-11-21T11:40:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (8, 1, '2023-11-20T17:15:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (9, 1, '2023-11-19T13:25:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (10, 1, '2023-11-18T09:50:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (11, 1, '2023-11-17T16:30:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (12, 1, '2023-11-16T22:45:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (13, 1, '2023-11-15T14:20:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (14, 1, '2023-11-14T19:05:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (15, 1, '2023-11-13T10:15:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (16, 1, '2023-11-12T11:55:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (17, 1, '2023-11-11T21:40:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (18, 1, '2023-11-10T12:20:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (19, 1, '2023-11-09T18:35:00.000')
+INSERT [dbo].[HistoryChanges] ([GlossaryItemId], [ActionId], [DateOfChanges]) VALUES (20, 1, '2023-11-08T15:00:00.000')
+Go;

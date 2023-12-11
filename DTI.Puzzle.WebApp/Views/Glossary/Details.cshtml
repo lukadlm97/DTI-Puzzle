@@ -1,0 +1,61 @@
+﻿@model GlossaryItemDetailsViewModel
+
+<div class="container">
+    <h2>Term Details</h2>
+
+    <div class="card">
+        <div class="card-body">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>@Html.DisplayNameFor(modelItem => modelItem.GlossaryViewModel.Term)</th>
+                        <td>@Html.DisplayFor(modelItem => modelItem.GlossaryViewModel.Term)</td>
+                    </tr>
+                    <tr>
+                        <th>@Html.DisplayNameFor(modelItem => modelItem.GlossaryViewModel.Definition)</th>
+                        <td>@Html.DisplayFor(modelItem => modelItem.GlossaryViewModel.Definition)</td>
+                    </tr>
+                    <tr>
+                    </tr>
+                </tbody>
+            </table>
+
+            <form asp-controller="Glossary" asp-action="Upsert" asp-route-glossaryId="@Model.GlossaryViewModel.Id" method="post" class="form-horizontal">
+                <div class="form-group row">
+                    <div class="col-md-10">
+                        <button type="submit" class="btn btn-success">Edit</button>
+                    </div>
+                </div>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.HistoryChangeViewModels[0].Action)</th>
+                        <th>@Html.DisplayNameFor(model => model.HistoryChangeViewModels[0].DateOfChange)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.HistoryChangeViewModels.Any())
+                    {
+                        @foreach (var item in Model.HistoryChangeViewModels)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Action)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DateOfChange)</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="3">No available actions</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <p>
+                <a asp-controller="Glossary" asp-action="Index" class="btn btn-outline-primary">Back to List</a>
+            </p>
+        </div>
+    </div>
+</div>

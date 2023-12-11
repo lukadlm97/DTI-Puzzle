@@ -1,0 +1,43 @@
+@DTI.Puzzle.WebApi_HostAddress = https://localhost:7052
+
+
+GET {{DTI.Puzzle.WebApi_HostAddress}}/api/v1/glossaryitem
+
+###
+
+GET {{DTI.Puzzle.WebApi_HostAddress}}/api/v1/glossaryitem/25
+
+###
+
+
+POST {{DTI.Puzzle.WebApi_HostAddress}}/api/v1/glossaryitem
+Content-Type: application/json
+
+{
+  "term":"term add",
+  "definition":"description"
+}
+
+###
+
+DELETE {{DTI.Puzzle.WebApi_HostAddress}}/api/v1/glossaryitem/50
+
+###
+
+PATCH {{DTI.Puzzle.WebApi_HostAddress}}/api/v1/glossaryitem/51
+Content-Type: application/json
+
+{
+  "term":"term edit",
+  "definition":"description edit"
+}
+
+###
+
+GET {{DTI.Puzzle.WebApi_HostAddress}}/api/v1/glossaryitem/51/historyChanges
+
+###
+
+GET {{DTI.Puzzle.WebApi_HostAddress}}/api/v1/glossaryitem/search?query=term
+
+###

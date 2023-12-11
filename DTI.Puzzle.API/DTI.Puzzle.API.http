@@ -1,0 +1,6 @@
+@DTI.Puzzle.API_HostAddress = http://localhost:5058
+
+GET {{DTI.Puzzle.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

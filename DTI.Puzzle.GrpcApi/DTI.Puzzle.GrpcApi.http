@@ -1,0 +1,5 @@
+﻿@DTI.Puzzle.GrpcApi_HostAddress = http://localhost:9813
+
+GET {{DTI.Puzzle.GrpcApi_HostAddress}}/
+
+###

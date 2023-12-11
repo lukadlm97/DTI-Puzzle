@@ -1,0 +1,13 @@
+﻿@model GlossaryInfoViewModel
+
+<h1 class="text-success">Success.</h1>
+<h2 class="text-success">Your request is successfully executed.</h2>
+<p class="text-success">
+    <strong>Details:</strong>
+    @Model.Description
+</p>
+
+
+<p>
+    <a asp-area="" asp-controller="Glossary" asp-action="Index" class="btn btn-primary">Back to List</a>
+</p>

@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+option csharp_namespace = "DTI.Puzzle.GrpcApi";
+package puzzle;
+
+import "google/protobuf/timestamp.proto";
+
+// The Puzzle service definition.
+service PuzzleProvider {
+  // Retrieves all items with paging information.
+  rpc GetAll (GetAllRequest) returns (GetAllReply);
+
+  // Retrieves a specific item by ID.
+  rpc GetById (OperateByIdRequest) returns (GlossaryItemReply);
+
+  // Searches for items based on a query.
+  rpc Search (SearchRequest) returns (GetAllReply);
+
+  // Searches for history of changes for item.
+  rpc GetHistoryChanges (OperateByIdRequest) returns (GetHistoryChangesReply);
+
+  // Adds a new item or updates an existing one.
+  rpc Add (UpsertRequest) returns (GlossaryItemReply);
+
+  // Updates an existing item.
+  rpc Update (UpsertRequest) returns (GlossaryItemReply);
+
+  // Deletes an item by ID.
+  rpc Delete (OperateByIdRequest) returns (GlossaryItemReply);
+}
+
+// Empty response message.
+message EmptyReply {}
+
+// Request message to retrieve all items with paging.
+message GetAllRequest {
+  int32 page_number = 1;
+  int32 page_size = 2;
+}
+
+// Request message to operate on an item by ID.
+message OperateByIdRequest {
+  int32 id = 1;
+}
+
+// Request message for searching items.
+message SearchRequest {
+  GetAllRequest paging = 1;
+  string query = 2;
+}
+
+// Request message for adding or updating an item.
+message UpsertRequest {
+  int32 id = 1;
+  string term = 2;
+  string definition = 3;
+}
+
+// Response message containing the list of items and total available count.
+message GetAllReply {
+  repeated GlossaryItemReply items = 1;
+  int32 total_available = 2;
+}
+
+// Response message containing the list of items and total available count.
+message GetHistoryChangesReply {
+  repeated HistoryChangesReply items = 1;
+  int32 total_available = 2;
+}
+
+// Response message containing details of a Glossary item.
+message GlossaryItemReply {
+  int32 id = 1;
+  string term = 2;
+  string definition = 3;
+}
+
+message HistoryChangesReply {
+  int32 id = 1;
+  int32 action_id = 2;
+  google.protobuf.Timestamp date_of_creation = 3;
+}
