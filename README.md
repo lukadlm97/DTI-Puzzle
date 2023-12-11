@@ -72,14 +72,14 @@ After it is performed, you will see the next page
 
 
 ## References:
-Data transfer objects - https://medium.com/codex/start-using-c-records-for-dtos-instead-of-regularclasses-1f84bd5997ca
-Milan Jovanovic clean code projects - https://github.com/m-jovanovic/event-reminder and https://github.com/m-jovanovic/rally-simulator
-Leave Management System - SOLID and Clean Architecture -https://github.com/trevoirwilliams/HR.LeaveManagement.NET6
-CQRS - https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
-MediatR - https://github.com/jbogard/MediatR and https://medium.com/dotnet-hub/use-mediatrin-asp-net-or-asp-net-core-cqrs-and-mediator-in-dotnet-how-to-use-mediatr-cqrs-aspnetcore5076e2f2880c
-Automapper - https://automapper.org/
-Fluent validation - https://docs.fluentvalidation.net/en/latest/aspnet.html
-xUnit - https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
-Entityframework - https://learn.microsoft.com/en-us/ef/core/providers/sql-server/?tabs=dotnetcore-cli and https://learn.microsoft.com/en-us/ef/core/get-started/overview/firstapp?tabs=netcore-cli
-Grpc - https://github.com/grpc/grpc-dotnet and https://learn.microsoft.com/enus/aspnet/core/grpc/?view=aspnetcore-8.0
-Asp.net MVC - https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/startmvc?view=aspnetcore-8.0&tabs=visual-studi
+- Data transfer objects - https://medium.com/codex/start-using-c-records-for-dtos-instead-of-regularclasses-1f84bd5997ca
+- Milan Jovanovic clean code projects - https://github.com/m-jovanovic/event-reminder and https://github.com/m-jovanovic/rally-simulator
+- Leave Management System - SOLID and Clean Architecture -https://github.com/trevoirwilliams/HR.LeaveManagement.NET6
+- CQRS - https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
+- MediatR - https://github.com/jbogard/MediatR and https://medium.com/dotnet-hub/use-mediatrin-asp-net-or-asp-net-core-cqrs-and-mediator-in-dotnet-how-to-use-mediatr-cqrs-aspnetcore5076e2f2880c
+- Automapper - https://automapper.org/
+- Fluent validation - https://docs.fluentvalidation.net/en/latest/aspnet.html
+- xUnit - https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
+- Entityframework - https://learn.microsoft.com/en-us/ef/core/providers/sql-server/?tabs=dotnetcore-cli and https://learn.microsoft.com/en-us/ef/core/get-started/overview/firstapp?tabs=netcore-cli
+- Grpc - https://github.com/grpc/grpc-dotnet and https://learn.microsoft.com/enus/aspnet/core/grpc/?view=aspnetcore-8.0
+- Asp.net MVC - https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/startmvc?view=aspnetcore-8.0&tabs=visual-studi
